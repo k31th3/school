@@ -18,15 +18,6 @@ type SideBarProps = {
     handleClose: () => void;
 };
 
-type SidebarItemProps = {
-    href: string;
-    onClick?: () => void;
-    className?: string;
-    children: React.ReactNode;
-    target?: string;
-    rel?: string;
-};
-
 const SideBar = ({ isOpen, handleClose }: SideBarProps) => {
 
     const [openId, setOpenId] = useState<string | number | null>(null);
@@ -97,13 +88,17 @@ const SideBar = ({ isOpen, handleClose }: SideBarProps) => {
                                                 {item.dropdown.option.map((opt: NavBarOption) => (
                                                     <SidebarItem
                                                         key={opt.id}
-                                                        href={opt.link}
                                                         onClick={handleClose}
                                                         className="text-sm px-5 hover:bg-blue-100 rounded-sm"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
                                                     >
-                                                        {opt.title}
+                                                        <a
+                                                            href={opt.link}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="block w-full"
+                                                        >
+                                                            {opt.title}
+                                                        </a>
                                                     </SidebarItem>
                                                 ))}
                                             </motion.div>
