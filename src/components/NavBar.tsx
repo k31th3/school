@@ -7,9 +7,10 @@ import {
     Button
 } from "flowbite-react";
 
-import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
-
+import { motion } from "motion/react";
 import { MdMenu } from "react-icons/md";
+
+import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
 import { LogoBrand } from "@/components";
 
 type NavbarProps = {
@@ -35,7 +36,7 @@ const NavBar = ({ scrolled, onOpenMenu }: NavbarProps) => {
         {/* Desktop Menu */}
         <div className="hidden lg:block">
             <ul className="flex items-center gap-6">
-                {NavBarRow.map((item: NavbarItem) => {
+                {NavBarRow.map((item: NavBarItem) => {
                     if (item.dropdown) {
                     const dropdown = item.dropdown;
 
@@ -43,7 +44,7 @@ const NavBar = ({ scrolled, onOpenMenu }: NavbarProps) => {
                         <li key={item.id}>
                         <Dropdown label={dropdown.title} inline>
                             {dropdown.option.map(
-                                (opt: NavbarOption, index: number) => (
+                                (opt: NavBarOption, index: number) => (
                                     <div key={opt.id}>
                                         <DropdownItem
                                             as="a"
@@ -81,14 +82,19 @@ const NavBar = ({ scrolled, onOpenMenu }: NavbarProps) => {
 
         {/* Mobile Menu */}
         <div className="lg:hidden">
-            <Button
-                color="light"
-                size="md"
-                className="cursor-pointer px-3"
-                aria-label="Open menu"
-                onClick={onOpenMenu}>
-                <MdMenu size={24} />
-            </Button>    
+            <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}>
+                <Button
+                    color="light"
+                    size="md"
+                    className="cursor-pointer px-3"
+                    aria-label="Open menu"
+                    onClick={onOpenMenu}>
+                    <MdMenu size={24} />
+                </Button>
+            </motion.div>    
         </div>
             </div>
         </nav>
