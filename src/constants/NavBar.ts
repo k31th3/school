@@ -7,14 +7,14 @@ import {
   MdContactMail
 } from "react-icons/md";
 
-export type NavbarOption = {
+export type NavBarOption = {
   	id: number | string;
   	title: string;
   	link: string;
   	icon?: any;
 };
 
-export type NavbarItem = {
+export type NavBarItem = {
   	id: number | string;
   	title: string;
   	link?: string;
@@ -26,8 +26,7 @@ export type NavbarItem = {
   	};
 };
 
-
-export const NavbarMenu: NavbarItem[] = [
+export const NavBarRow: NavbarItem[] = [
 
 	{
 		id: 1,

@@ -1,11 +1,10 @@
 
-import Navbar from "./components/Navbar/Navbar";
+import { LogoBrand, NavBar } from "@/components";
+
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { useState, useEffect } from "react";
 
-import { NavbarMenu } from "@/mockData/data";
-import type { NavbarItem, NavbarOption } from "@/mockData/data";
-import Logo from "@/assets/CRTLogo.png";
+import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
 
 import {
     Drawer,
@@ -58,7 +57,7 @@ const App = () => {
 
     return (
         <main className="overflow-x-hidden">
-            <Navbar scrolled={scrolled} onOpenMenu={handleOpen} />
+            <NavBar scrolled={scrolled} onOpenMenu={handleOpen} />
 
             <button
                 type="button"
@@ -72,16 +71,7 @@ const App = () => {
 
             <Drawer open={isOpen} onClose={handleClose}>
                 
-                <div className="flex items-center gap-2 mb-5">
-                    <img
-                        src={Logo}
-                        className="size-10 shrink-0"
-                        alt="CRT"
-                    />
-                    <span className="text-xs font-semibold dark:text-white uppercase max-w-[150px]">
-                        college for research and technology
-                    </span>
-                </div>
+                <LogoBrand />
 
                 <DrawerItems>
                     <Sidebar
@@ -93,7 +83,7 @@ const App = () => {
                         <SidebarItems>
                             <SidebarItemGroup>
                                 {
-                                    NavbarMenu.map((item: NavbarItem) => {
+                                    NavBarRow.map((item: NavbarItem) => {
                                       // 🔽 DROPDOWN WITH ICON
                                     if (item.dropdown) {
                                         return (

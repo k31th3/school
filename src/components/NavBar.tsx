@@ -7,18 +7,17 @@ import {
     Button
 } from "flowbite-react";
 
-import { NavbarMenu } from "@/mockData/data";
-import type { NavbarItem, NavbarOption } from "@/mockData/data";
+import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
 
 import { MdMenu } from "react-icons/md";
-import Logo from "@/assets/CRTLogo.png";
+import { LogoBrand } from "@/components";
 
 type NavbarProps = {
     scrolled: boolean;
     onOpenMenu: () => void;
 };
 
-const Navbar = ({ scrolled, onOpenMenu }: NavbarProps) => {
+const NavBar = ({ scrolled, onOpenMenu }: NavbarProps) => {
 
     return (
     <nav className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 
@@ -27,25 +26,16 @@ const Navbar = ({ scrolled, onOpenMenu }: NavbarProps) => {
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center ${scrolled ? "py-4" : "py-6"}`}>
 
         {/* Logo */}
-        <div className="flex items-center gap-2 font-bold">
-            <a href="/" className="flex items-center gap-2">
-                <img
-                    src={Logo}
-                    className={`shrink-0 transition-all duration-300 
-                    ${scrolled ? "size-12" : "size-20"}`}
-                    alt="CRT"
-                />
-
-                <span className="lg:hidden text-xs font-semibold dark:text-white uppercase max-w-[150px]">
-                    college for research and technology
-                </span>
-            </a>
-        </div>
+        <LogoBrand  
+                imgClassName={`shrink-0 transition-all duration-300 
+                    ${scrolled ? "size-12" : "size-20"}`} 
+                textClassName="lg:hidden"
+                    />
 
         {/* Desktop Menu */}
         <div className="hidden lg:block">
             <ul className="flex items-center gap-6">
-                {NavbarMenu.map((item: NavbarItem) => {
+                {NavBarRow.map((item: NavbarItem) => {
                     if (item.dropdown) {
                     const dropdown = item.dropdown;
 
@@ -105,4 +95,4 @@ const Navbar = ({ scrolled, onOpenMenu }: NavbarProps) => {
     );
 };
 
-export default Navbar;
+export default NavBar;
