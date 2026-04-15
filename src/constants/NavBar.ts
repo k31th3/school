@@ -22,11 +22,11 @@ export type NavBarItem = {
   	dropdown?: {
     	title: string;
   		icon?: any;
-    	option: NavbarOption[];
+    	option: NavBarOption[];
   	};
 };
 
-export const NavBarRow: NavbarItem[] = [
+export const NavBarRow: NavBarItem[] = [
 
 	{
 		id: 1,

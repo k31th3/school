@@ -1,23 +1,35 @@
 
 import { motion, AnimatePresence } from "motion/react";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
 import { LogoBrand } from "@/components";
 
 import {
     Sidebar,
-    SidebarCollapse,
     SidebarItem,
     SidebarItemGroup,
     SidebarItems
 } from "flowbite-react";
 
+type SideBarProps = {
+    isOpen: boolean;
+    handleClose: () => void;
+};
 
-const SideBar = ({ isOpen, handleClose }) => {
+type SidebarItemProps = {
+    href: string;
+    onClick?: () => void;
+    className?: string;
+    children: React.ReactNode;
+    target?: string;
+    rel?: string;
+};
 
-    const [openId, setOpenId] = useState<string | null>(null);
+const SideBar = ({ isOpen, handleClose }: SideBarProps) => {
+
+    const [openId, setOpenId] = useState<string | number | null>(null);
 
     return (
         <AnimatePresence>
