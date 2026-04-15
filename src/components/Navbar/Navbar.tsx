@@ -30,7 +30,12 @@ const Navbar = () => {
                                                     <Dropdown label={dropdown.title} inline>
                                                         {dropdown.option.map((opt: NavbarOption, index: number) => (
                                                             <>
-                                                                <DropdownItem key={opt.id} as="a" href={opt.link}>
+                                                                <DropdownItem 
+                                                                    key={opt.id} 
+                                                                    as="a" 
+                                                                    href={opt.link}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer">
                                                                     {opt.title}
                                                                 </DropdownItem>
 
