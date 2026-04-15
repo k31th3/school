@@ -23,27 +23,25 @@ const Navbar = () => {
                                 {
                                     NavbarMenu.map((item: NavbarItem) => {
                                         if (item.dropdown) {
+                                            const dropdown = item.dropdown;
+
                                             return (
                                                 <li key={item.id}>
-                                                    <Dropdown label={item.dropdown.title} inline>
-                                                        {item.dropdown.option.map((opt: NavbarOption, index: number) => (
+                                                    <Dropdown label={dropdown.title} inline>
+                                                        {dropdown.option.map((opt: NavbarOption, index: number) => (
                                                             <>
-                                                                <DropdownItem key={opt.id} as="a" 
-                                                                    href={opt.link}
-                                                                    target="_blank"
-                                                                    rel="noopener noreferrer">
-                                                                    
+                                                                <DropdownItem key={opt.id} as="a" href={opt.link}>
                                                                     {opt.title}
                                                                 </DropdownItem>
 
-                                                                {index !== item.dropdown.option.length - 1 && (
+                                                                {index !== dropdown.option.length - 1 && (
                                                                     <DropdownDivider />
                                                                 )}
                                                             </>
                                                         ))}
                                                     </Dropdown>
                                                 </li>
-                                            );
+                                            )
                                         }
 
                                         return (
