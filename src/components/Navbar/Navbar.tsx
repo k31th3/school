@@ -4,14 +4,7 @@ import {
     Dropdown,
     DropdownDivider,
     DropdownItem,
-    Button,
-    Drawer,
-    DrawerItems,
-    Sidebar,
-    SidebarCollapse,
-    SidebarItem,
-    SidebarItemGroup,
-    SidebarItems
+    Button
 } from "flowbite-react";
 
 import { NavbarMenu } from "@/mockData/data";
@@ -20,22 +13,26 @@ import type { NavbarItem, NavbarOption } from "@/mockData/data";
 import { MdMenu } from "react-icons/md";
 import Logo from "@/assets/CRTLogo.png";
 
-import { useState } from "react";
+type NavbarProps = {
+    scrolled: boolean;
+    onOpenMenu: () => void;
+};
 
-const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleClose = () => setIsOpen(false);
+const Navbar = ({ scrolled, onOpenMenu }: NavbarProps) => {
 
     return (
-    <nav>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-6">
+    <nav className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 
+    bg-white/80 backdrop-blur-md ${scrolled ? "shadow-md py-2" : ""}`}>
+
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center ${scrolled ? "py-4" : "py-6"}`}>
 
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold">
             <a href="/" className="flex items-center gap-2">
                 <img
                     src={Logo}
-                    className="size-20 shrink-0"
+                    className={`shrink-0 transition-all duration-300 
+                    ${scrolled ? "size-12" : "size-20"}`}
                     alt="CRT"
                 />
 
@@ -82,7 +79,7 @@ const Navbar = () => {
                         <li key={item.id}>
                             <a
                                 href={item.link}
-                                className="text-gray-600 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-primary transition-all duration-300 font-semibold uppercase"
+                                className={`text-gray-600 transition-all duration-300 font-semibold uppercase text-sm xl:text-base px-3`}
                              >
                                 {item.title}
                             </a>
@@ -99,81 +96,10 @@ const Navbar = () => {
                 size="md"
                 className="cursor-pointer px-3"
                 aria-label="Open menu"
-                onClick={() => setIsOpen(true)}
-            >
+                onClick={onOpenMenu}>
                 <MdMenu size={24} />
-            </Button>
-
-            <Drawer open={isOpen} onClose={handleClose}>
-                
-                <div className="flex items-center gap-2 mb-5">
-                    <img
-                        src={Logo}
-                        className="size-10 shrink-0"
-                        alt="CRT"
-                    />
-                    <span className="text-xs font-semibold dark:text-white uppercase max-w-[150px]">
-                        college for research and technology
-                    </span>
-                </div>
-
-                <DrawerItems>
-                    <Sidebar
-                        aria-label="Sidebar with icons"
-                        className="[&>div]:bg-transparent [&>div]:p-0 w-full">
-
-                    <div className="flex h-full flex-col justify-between py-2 uppercase">
-                        <div>
-                        <SidebarItems>
-                            <SidebarItemGroup>
-                                {
-                                    NavbarMenu.map((item: NavbarItem) => {
-                                      // 🔽 DROPDOWN WITH ICON
-                                    if (item.dropdown) {
-                                        return (
-                                            <SidebarCollapse
-                                                key={item.id}
-                                                label={item.dropdown.title}
-                                                icon={item.dropdown.icon}
-                                                className="uppercase">
-                                                {item.dropdown.option.map((opt: NavbarOption) => (
-                                                    <SidebarItem
-                                                        key={opt.id}
-                                                        href={opt.link}
-                                                        onClick={handleClose}
-                                                        className="text-sm px-5"
-                                                        {...({
-                                                            target: "_blank",
-                                                            rel: "noopener noreferrer",
-                                                        } as any)}
-                                                        >
-                                                        {opt.title}
-                                                    </SidebarItem>
-                                                ))}
-                                            </SidebarCollapse>
-                                        );
-                                    }
-
-                                    // 🔹 NORMAL ITEM WITH ICON
-                                    return (
-                                            <SidebarItem
-                                                key={item.id}
-                                                href={item.link}
-                                                icon={item.icon}
-                                                onClick={handleClose}>
-                                                {item.title}
-                                            </SidebarItem>
-                                        );
-                                    })
-                                }
-                            </SidebarItemGroup>
-                        </SidebarItems>
-                        </div>
-                    </div>
-                    </Sidebar>
-                </DrawerItems>
-            </Drawer>
-                </div>
+            </Button>    
+        </div>
             </div>
         </nav>
     );
