@@ -1,8 +1,5 @@
 
-import React from "react";
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
-import { motion } from "framer-motion";
-
 import { NavbarMenu } from "@/mockData/data.js";
 import Logo from "@/assets/CRTLogo.png";
 
@@ -14,7 +11,9 @@ const Navbar = () => {
                     
                     {/* Logo section */}
                         <div className="text-2xl flex items-center gap-2 font-bold">
-                            <img src={Logo} className="size-20 shrink-0" alt="CRT logo" />
+                            <a href="/">
+                                <img src={Logo} className="size-20 shrink-0" alt="CRT logo"/>
+                            </a>
                         </div>
 
                     {/* Menu section */}
@@ -51,7 +50,7 @@ const Navbar = () => {
                                             <li key={item.id}>
                                               <a
                                                 href={item.link}
-                                                className="text-gray-600 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-secondary transition-all duration-300 font-semibold uppercase"
+                                                className="text-gray-600 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-primary transition-all duration-300 font-semibold uppercase"
                                               >
                                                 {item.title}
                                               </a>

@@ -4,7 +4,7 @@ import { createTheme } from "flowbite-react";
 export const customTheme = createTheme({
     dropdown: {
         arrowIcon: "ml-2 h-4 w-4",
-        content: "py-1 focus:outline-none",
+        content: "py-1 focus:outline-none rounded-md",
         floating: {
             animation: "transition-opacity",
             arrow: {
@@ -22,8 +22,8 @@ export const customTheme = createTheme({
             header: "block px-4 py-2 text-sm text-gray-700 dark:text-gray-200",
             hidden: "invisible opacity-0",
             item: {
-                container: "",
-                base: "flex w-full cursor-pointer items-center justify-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white",
+                container: "text-gray-600 text-sm xl:text-base py-1 px-2 xl:px-2 hover:text-secondary transition-all duration-300 font-semibold uppercase",
+                base: "text-xs hover:bg-blue-100 focus:bg-blue-100 rounded-sm",
                 icon: "mr-2 h-4 w-4",
             },
             style: {
@@ -33,6 +33,6 @@ export const customTheme = createTheme({
             },
             target: "w-fit",
         },
-        inlineWrapper: "flex items-center"
+        inlineWrapper: "cursor-pointer text-gray-600 hover:text-primary font-semibold uppercase"
     },
 });

@@ -3,7 +3,7 @@ export const NavbarMenu = [
 	{
 		id: 1,
 		title: "home",
-		link: "/"
+		link: "#"
 	},
 	{
 		id: 2,
@@ -12,7 +12,7 @@ export const NavbarMenu = [
 	},
 	{
 		id: 3,
-		title: "course offered",
+		title: "course",
 		link: "#"
 	},
 	{
@@ -23,12 +23,12 @@ export const NavbarMenu = [
 				{
 					id: 1,
 					title: "crt careers connect",
-					link: "#"
+					link: "https://crtcareers.seemeconnect.com/"
 				},
 				{
 					id: 2,
 					title: "crt lms student",
-					link: "#"
+					link: "https://crt.edu.ph/lms/student/#/login"
 				}
 			]
 		}
@@ -41,17 +41,17 @@ export const NavbarMenu = [
 				{
 					id: 1,
 					title: "college",
-					link: "#"
+					link: "https://docs.google.com/forms/d/e/1FAIpQLSfZOilIA20jzKHsMmVlH8_EBZGBCx5oVHz07QGxs6cWEY5WbA/viewform"
 				},
 				{
 					id: 2,
 					title: "junior high school",
-					link: "#"
+					link: "https://docs.google.com/forms/d/e/1FAIpQLScgoUFWRhF-1Y4Bpofbg3ysYugTidlQHkFqJgNCMv36L9ZuTg/viewform"
 				},
 				{
 					id: 3,
 					title: "senior high school",
-					link: "#"
+					link: "https://docs.google.com/forms/d/e/1FAIpQLSf1T9mFINOuS-N7UaxM8RwWz0_aGjAS4j0ieLwYBhw_euFq9Q/viewform"
 				}
 			]
 		}

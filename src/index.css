@@ -2,8 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #FFCF3A;
-  --color-secondary: #0063FF;
+  --color-primary: #05359B;
 
   --container-padding: 1rem;
 }
