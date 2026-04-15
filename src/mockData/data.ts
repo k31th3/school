@@ -1,16 +1,27 @@
+import {
+  MdHome,
+  MdInfo,
+  MdSchool,
+  MdComputer,
+  MdAssignment,
+  MdContactMail
+} from "react-icons/md";
 
 export type NavbarOption = {
   	id: number | string;
   	title: string;
   	link: string;
+  	icon?: any;
 };
 
 export type NavbarItem = {
   	id: number | string;
   	title: string;
   	link?: string;
+  	icon?: any;
   	dropdown?: {
     	title: string;
+  		icon?: any;
     	option: NavbarOption[];
   	};
 };
@@ -21,21 +32,25 @@ export const NavbarMenu: NavbarItem[] = [
 	{
 		id: 1,
 		title: "home",
-		link: "#"
+		link: "#",
+		icon: MdHome
 	},
 	{
 		id: 2,
 		title: "about",
-		link: "#"
+		link: "#",
+		icon: MdInfo
 	},
 	{
 		id: 3,
 		title: "course",
-		link: "#"
+		link: "#",
+		icon: MdSchool
 	},
 	{
 	  	id: 4,
 	  	title: "CRT Online",
+	  	icon: MdComputer,
 	  	dropdown: {
 	    	title: "crt online",
 	    	option: [
@@ -53,8 +68,9 @@ export const NavbarMenu: NavbarItem[] = [
 	  	}
 	},
 	{
-	  id: 5,
-		title: "Admissions",
+	  	id: 5,
+			title: "Admissions",
+	  	icon: MdAssignment,
 		  	dropdown: {
 		    	title: "admission",
 		    	option: [
@@ -79,7 +95,8 @@ export const NavbarMenu: NavbarItem[] = [
 	{
 		id: 6,
 		title: "contact us",
-		link: "#"
+		link: "#",
+	  icon: MdContactMail
 	}
 
 ];

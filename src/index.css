@@ -1,5 +1,6 @@
 
 @import "tailwindcss";
+@import "flowbite";
 
 @theme {
   --color-primary: #05359B;
