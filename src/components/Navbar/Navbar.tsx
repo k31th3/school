@@ -1,6 +1,6 @@
 
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
-import { NavbarMenu } from "@/mockData/data.js";
+import { NavbarMenu } from "@/mockData/data";
 import Logo from "@/assets/CRTLogo.png";
 
 const Navbar = () => {
@@ -20,42 +20,37 @@ const Navbar = () => {
                         <div className="hidden lg:block">
                             <ul className="flex items-center gap-6">
                                 {
-                                    NavbarMenu.map((item) => {
+                                    NavbarMenu.map((item: NavbarItem) => {
                                         if (item.dropdown) {
                                             return (
-                                              <li key={item.id}>
-                                                <Dropdown label={item.dropdown.title} inline>
+                                                <li key={item.id}>
+                                                    <Dropdown label={item.dropdown.title} inline>
+                                                        {item.dropdown.option.map(
+                                                            (opt: NavbarOption, index: number) => (
+                                                                <div key={opt.id}>
+                                                                    <DropdownItem as="a" href={opt.link}>
+                                                                        {opt.title}
+                                                                    </DropdownItem>
 
-                                                    {item.dropdown.option.map((opt, index) => (
-                                                        <div key={opt.id}>
-                                                            <DropdownItem
-                                                                key={opt.id}
-                                                                as="a"
-                                                                href={opt.link}
-                                                            >
-                                                                {opt.title}
-                                                            </DropdownItem>
-                                                            {index !== item.dropdown.option.length - 1 && (
-                                                                <DropdownDivider />
-                                                            )}
-                                                        </div>
-                                                    ))}
-
-                                                </Dropdown>
-                                              </li>
+                                                                    {index !== item.dropdown.option.length - 1 && (
+                                                                        <DropdownDivider />
+                                                                    )}
+                                                                </div>
+                                                            )
+                                                        )}
+                                                    </Dropdown>
+                                                </li>
                                             );
                                         }
-                                        
+
                                         return (
                                             <li key={item.id}>
-                                              <a
-                                                href={item.link}
-                                                className="text-gray-600 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-primary transition-all duration-300 font-semibold uppercase"
-                                              >
-                                                {item.title}
-                                              </a>
+                                                <a href={item.link}
+                                                   className="text-gray-600 text-sm xl:text-base py-1 px-2 xl:px-3 hover:text-primary transition-all duration-300 font-semibold uppercase">
+                                                    {item.title}
+                                                </a>
                                             </li>
-                                        );
+                                        )
                                     })
                                 }
                             </ul>
