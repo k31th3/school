@@ -6,7 +6,6 @@ import {
     DropdownItem,
     Button,
     Drawer,
-    DrawerHeader,
     DrawerItems,
     Sidebar,
     SidebarCollapse,
@@ -138,16 +137,19 @@ const Navbar = () => {
                                                 icon={item.dropdown.icon}
                                                 className="uppercase">
                                                 {item.dropdown.option.map((opt: NavbarOption) => (
-                                                <SidebarItem
-                                                    key={opt.id}
-                                                    href={opt.link}
-                                                    onClick={handleClose}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-sm px-5">
-                                                    {opt.title}
-                                                </SidebarItem>
-                                            ))}
+                                                    <SidebarItem
+                                                        key={opt.id}
+                                                        href={opt.link}
+                                                        onClick={handleClose}
+                                                        className="text-sm px-5"
+                                                        {...({
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                        } as any)}
+                                                        >
+                                                        {opt.title}
+                                                    </SidebarItem>
+                                                ))}
                                             </SidebarCollapse>
                                         );
                                     }
