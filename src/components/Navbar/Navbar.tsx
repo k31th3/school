@@ -1,6 +1,7 @@
 
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
 import { NavbarMenu } from "@/mockData/data";
+import type { NavbarItem, NavbarOption } from "@/mockData/data";
 import Logo from "@/assets/CRTLogo.png";
 
 const Navbar = () => {
@@ -25,19 +26,21 @@ const Navbar = () => {
                                             return (
                                                 <li key={item.id}>
                                                     <Dropdown label={item.dropdown.title} inline>
-                                                        {item.dropdown.option.map(
-                                                            (opt: NavbarOption, index: number) => (
-                                                                <div key={opt.id}>
-                                                                    <DropdownItem as="a" href={opt.link}>
-                                                                        {opt.title}
-                                                                    </DropdownItem>
+                                                        {item.dropdown.option.map((opt: NavbarOption, index: number) => (
+                                                            <>
+                                                                <DropdownItem key={opt.id} as="a" 
+                                                                    href={opt.link}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer">
+                                                                    
+                                                                    {opt.title}
+                                                                </DropdownItem>
 
-                                                                    {index !== item.dropdown.option.length - 1 && (
-                                                                        <DropdownDivider />
-                                                                    )}
-                                                                </div>
-                                                            )
-                                                        )}
+                                                                {index !== item.dropdown.option.length - 1 && (
+                                                                    <DropdownDivider />
+                                                                )}
+                                                            </>
+                                                        ))}
                                                     </Dropdown>
                                                 </li>
                                             );

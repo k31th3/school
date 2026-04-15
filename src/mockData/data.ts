@@ -1,4 +1,22 @@
-export const NavbarMenu = [
+
+export type NavbarOption = {
+  	id: number | string;
+  	title: string;
+  	link: string;
+};
+
+export type NavbarItem = {
+  	id: number | string;
+  	title: string;
+  	link?: string;
+  	dropdown?: {
+    	title: string;
+    	option: NavbarOption[];
+  	};
+};
+
+
+export const NavbarMenu: NavbarItem[] = [
 
 	{
 		id: 1,
