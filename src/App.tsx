@@ -75,7 +75,7 @@ const App = () => {
     };
 
     return (
-        <main className="flex flex-col gap-10">
+        <main className="flex flex-col gap-10 overflow-x-hidden">
 
             <AnimatePresence>
                 {loading && (
