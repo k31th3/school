@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "@/assets/CRTLogo.png";
 
 type LogoBrandProps = {
@@ -15,7 +16,7 @@ const LogoBrand: React.FC<LogoBrandProps> = ({
     textClassName = ""
 }) => {
     return (
-        <div className={`flex items-center gap-2 ${className}`}>
+        <Link to="/" className={`flex items-center gap-2 ${className}`}>
             <img
                 src={Logo}
                 alt="logo"
@@ -28,7 +29,7 @@ const LogoBrand: React.FC<LogoBrandProps> = ({
                     </span>
                 )
             }
-        </div>
+        </Link>
     );
 };
 
