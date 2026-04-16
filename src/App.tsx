@@ -5,9 +5,7 @@ import { animate } from "motion";
 import { motion, AnimatePresence } from "motion/react";
 
 import { NavBar, SideBar } from "@/components";
-
-import { Home, Hero, Footer } from "@/components/layout";
-
+import { Home, Hero, WhyChooseUs, Footer } from "@/components/layout";
 
 import "./App.css";
 
@@ -122,7 +120,8 @@ const App = () => {
             </div>
 
         
-            <Hero />    
+            <Hero />  
+            <WhyChooseUs />
             <Footer />
             
         </main>

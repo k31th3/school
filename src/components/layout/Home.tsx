@@ -39,13 +39,16 @@ const Home = () => {
 					        	<button type="button" className="bg-primary cursor-pointer font-semibold px-6 py-3 text-white rounded-full hover:!scale-105 duration-300">
 					         		Enroll Now
 					        	</button>
-
-					        	<button className="flex justify-end items-center font-semibold cursor-pointer">
-					        		<span className="w-10 h-10 bg-secondary flex justify-center items-center">
+					        	<a
+	                                href="https://crtcareers.seemeconnect.com/"
+	                                target="_blank"
+                                    rel="noopener noreferrer"
+	                                className="flex justify-end items-center font-semibold cursor-pointer">
+	                                <span className="w-10 h-10 bg-secondary flex justify-center items-center">
 					        			<FaPenToSquare className="text-yellow-300" />	
 					        		</span>	
 					          		CRT Careers Connect
-					        	</button>
+	                            </a>
 					      	</motion.div>
 					    </div>
 
