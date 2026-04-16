@@ -33,6 +33,6 @@ export const customTheme = createTheme({
             },
             target: "w-fit",
         },
-        inlineWrapper: "cursor-pointer text-gray-600 hover:text-primary font-semibold uppercase"
+        inlineWrapper: "cursor-pointer text-[#878594] hover:text-primary font-semibold uppercase"
     }
 });

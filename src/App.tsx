@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 import { NavBar, SideBar } from "@/components";
 
-import { Home } from "@/components/layout";
+import { Home, Hero, Footer } from "@/components/layout";
 
 
 import "./App.css";
@@ -77,7 +77,7 @@ const App = () => {
     };
 
     return (
-        <main className="overflow-x-hidden">
+        <main className="flex flex-col gap-10">
 
             <AnimatePresence>
                 {loading && (
@@ -120,8 +120,10 @@ const App = () => {
             <div id="sectionHome">
                 <Home />
             </div>
-            
-            
+
+        
+            <Hero />    
+            <Footer />
             
         </main>
     )

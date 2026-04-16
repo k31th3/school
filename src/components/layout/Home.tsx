@@ -10,7 +10,7 @@ const Home = () => {
 			<div className="mt-35">
 				
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-				  	<div className="grid grid-cols-1 md:grid-cols-2 relative min-h-[450px] gap-5">
+				  	<div className="grid grid-cols-1 lg:grid-cols-2 relative min-h-[450px] gap-5">
 				    
 					    {/* LEFT CONTENT */}
 					    <div className="flex flex-col justify-center md:pr-16 xl:pr-40 md:py-0 gap-5">
@@ -27,7 +27,7 @@ const Home = () => {
 					      		variants={SlideRight(0.6)}
 					      		initial="hidden"
 					      		animate="visible"
-					      		className="text-gray-600">
+					      		className="text-[#878594] font-semibold">
 					        	Shape your future today through knowledge, discipline, and passion for learning
 					      	</motion.p>
 
@@ -37,7 +37,7 @@ const Home = () => {
 					      		animate="visible"
 					      		className="flex flex-row gap-3 justify-center lg:justify-start !my-8">
 					        	<button type="button" className="bg-primary cursor-pointer font-semibold px-6 py-3 text-white rounded-full hover:!scale-105 duration-300">
-					         		Get Started
+					         		Enroll Now
 					        	</button>
 
 					        	<button className="flex justify-end items-center font-semibold cursor-pointer">
@@ -62,6 +62,7 @@ const Home = () => {
 					    </div>
 
 				  	</div>
+
 				</div>
 
 			</div>

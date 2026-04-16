@@ -70,7 +70,7 @@ const NavBar = ({ scrolled, onOpenMenu }: NavbarProps) => {
                         <li key={item.id}>
                             <a
                                 href={item.link}
-                                className={`text-gray-600 transition-all duration-300 font-semibold uppercase text-sm xl:text-base px-3`}
+                                className={`text-[#878594] transition-all duration-300 font-semibold uppercase text-sm xl:text-base px-3`}
                              >
                                 {item.title}
                             </a>
