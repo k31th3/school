@@ -27,9 +27,9 @@ const ReadyToJoinUs = () => {
 							variants={SlideRight(0.3)}
 					    	initial="hidden"
 					    	whileInView={"visible"} 
-							class="p-6 flex flex-col gap-4 shadow-md border border-gray-100 rounded-lg lg:rounded-none lg:rounded-l-lg lg:mt-12">
+							className="p-6 flex flex-col gap-4 shadow-md border border-gray-100 rounded-lg lg:rounded-none lg:rounded-l-lg lg:mt-12">
 						    
-						    <h3 class="text-3xl font-bold mb-2 text-center">Junior High School</h3>
+						    <h3 className="text-3xl font-bold mb-2 text-center">Junior High School</h3>
 						    
 					      	<div className="mb-auto">
 
@@ -64,9 +64,9 @@ const ReadyToJoinUs = () => {
 						    </div>
 					    </motion.div>
 
-					    <div class="bg-primary text-white shadow-lg rounded-xl p-6 flex flex-col gap-4">
+					    <div className="bg-primary text-white shadow-lg rounded-xl p-6 flex flex-col gap-4">
 						    
-						    <h3 class="text-3xl font-bold mb-2 text-center">College</h3>
+						    <h3 className="text-3xl font-bold mb-2 text-center">College</h3>
 						    
 						    <div>
 
