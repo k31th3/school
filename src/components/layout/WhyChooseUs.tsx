@@ -7,14 +7,14 @@ import { WhyChooseUsRow } from "@/constants";
 const WhyChooseUs = () => {
 	return (
 		<>
-			<div className="bg-[#F9FAFC]">
+			<div className="bg-[#F9FAFC] py-12">
 					
 					{/*header section*/}
 					<div className="space-y-4 p-6 text-center max-w-[500px] mx-auto mb-5">
-						<h1 className="uppercase font-semibold text-orange-600 text-md">
+						<h1 className="uppercase font-semibold text-orange-600 text-2xl lg:text-md">
 							Why Choose Us
 						</h1>
-						<p className="font-semibold text-1xl">
+						<p className="font-semibold text-1xl lg:text-lg">
 							Affordable, quality education that builds skills for real-world success.
 						</p>
 					</div>

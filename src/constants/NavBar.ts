@@ -36,15 +36,15 @@ export const NavBarRow: NavBarItem[] = [
 	},
 	{
 		id: 2,
-		title: "about",
-		link: "#",
-		icon: MdInfo
+		title: "course",
+		link: "#sectionReadyToJoinUs",
+		icon: MdSchool
 	},
 	{
 		id: 3,
-		title: "course",
+		title: "about",
 		link: "#",
-		icon: MdSchool
+		icon: MdInfo
 	},
 	{
 	  	id: 4,
@@ -67,29 +67,10 @@ export const NavBarRow: NavBarItem[] = [
 	  	}
 	},
 	{
-	  	id: 5,
-			title: "Admissions",
-	  	icon: MdAssignment,
-		  	dropdown: {
-		    	title: "admission",
-		    	option: [
-			    {
-			        id: 1,
-			        title: "college",
-			        link: "https://docs.google.com/forms/d/e/1FAIpQLSfZOilIA20jzKHsMmVlH8_EBZGBCx5oVHz07QGxs6cWEY5WbA/viewform"
-			    },
-			    {
-			        id: 2,
-			        title: "junior high school",
-			        link: "https://docs.google.com/forms/d/e/1FAIpQLScgoUFWRhF-1Y4Bpofbg3ysYugTidlQHkFqJgNCMv36L9ZuTg/viewform"
-			    },
-			    {
-			        id: 3,
-			        title: "senior high school",
-			        link: "https://docs.google.com/forms/d/e/1FAIpQLSf1T9mFINOuS-N7UaxM8RwWz0_aGjAS4j0ieLwYBhw_euFq9Q/viewform"
-			    }
-		    ]
-		}
+  	id: 5,
+		title: "Admissions",
+  	link: "https://app.crteducph.com/",
+  	icon: MdAssignment
 	},
 	{
 		id: 6,

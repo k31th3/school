@@ -7,6 +7,7 @@ import { SlideRight } from "@/utility/HomeAnimation";
 const Home = () => {
 	return (
 		<>
+			<div id="sectionHome">
 			<div className="mt-35">
 				
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,9 +37,11 @@ const Home = () => {
 					      		initial="hidden"
 					      		animate="visible"
 					      		className="flex flex-row gap-3 justify-center lg:justify-start !my-8">
-					        	<button type="button" className="bg-primary cursor-pointer font-semibold px-6 py-3 text-white rounded-full hover:!scale-105 duration-300">
-					         		Enroll Now
-					        	</button>
+					        	<a
+	                                href="#sectionReadyToJoinUs"
+	                                className="bg-primary cursor-pointer font-semibold px-6 py-3 text-white rounded-full hover:!scale-105 duration-300">
+	                                Enroll Now
+	                            </a>
 					        	<a
 	                                href="https://crtcareers.seemeconnect.com/"
 	                                target="_blank"
@@ -68,6 +71,7 @@ const Home = () => {
 
 				</div>
 
+			</div>
 			</div>
 		</>
 	);

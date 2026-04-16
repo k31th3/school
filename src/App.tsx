@@ -5,7 +5,7 @@ import { animate } from "motion";
 import { motion, AnimatePresence } from "motion/react";
 
 import { NavBar, SideBar } from "@/components";
-import { Home, Hero, WhyChooseUs, Footer } from "@/components/layout";
+import { Home, Hero, WhyChooseUs, ReadyToJoinUs, Footer } from "@/components/layout";
 
 import "./App.css";
 
@@ -75,7 +75,7 @@ const App = () => {
     };
 
     return (
-        <main className="flex flex-col gap-10 overflow-x-hidden">
+        <main className="flex flex-col gap-10 overflow-hidden">
 
             <AnimatePresence>
                 {loading && (
@@ -114,14 +114,11 @@ const App = () => {
             {/*offCanvas*/}
             <SideBar isOpen={isOpen} handleClose={handleClose} />
             
-            {/*Home section*/}
-            <div id="sectionHome">
-                <Home />
-            </div>
 
-        
+            <Home />
             <Hero />  
             <WhyChooseUs />
+            <ReadyToJoinUs />
             <Footer />
             
         </main>
