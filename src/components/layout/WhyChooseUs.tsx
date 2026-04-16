@@ -8,7 +8,6 @@ const WhyChooseUs = () => {
 	return (
 		<>
 			<div className="bg-[#F9FAFC]">
-				<div className="container py-8">
 					
 					{/*header section*/}
 					<div className="space-y-4 p-6 text-center max-w-[500px] mx-auto mb-5">
@@ -54,7 +53,6 @@ const WhyChooseUs = () => {
 
 					</div>
 
-				</div>
 			</div>
 		</>
 	)
