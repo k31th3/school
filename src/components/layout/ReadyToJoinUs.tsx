@@ -231,12 +231,14 @@ const ReadyToJoinUs = () => {
 				              	exit={{ scale: 0.8, opacity: 0 }}
 				              	onClick={(e) => e.stopPropagation()}>
 				              	
-				              	<video
-				                	className="w-full rounded-lg"
-				                	controls
-				                	autoPlay>
-				                	<source src={activeVideo} type="video/mp4" />
-				              	</video>
+				              	{activeVideo && (
+								  	<video
+								    	className="w-full rounded-lg"
+								    	controls
+								    	autoPlay>
+								    <source src={activeVideo} type="video/mp4" />
+								  	</video>
+								)}
 
 				              	<div className="text-center mt-4">
 				                	<button
