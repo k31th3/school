@@ -6,26 +6,16 @@ import {
 import { List, ListItem } 		 from "flowbite-react";
 import { SlideLeft, SlideRight } from "@/utility/HomeAnimation";
 
+import { ReadyToJoinUsRow }      from "@/constants";
+
+
 const ReadyToJoinUs = () => {
 
 	const [open, setOpen] = useState(false);
   	const [activeVideo, setActiveVideo] = useState(null);
 
-  	const playVideos = [
-		    {
-		      	id: 1,
-      			thumbnail: "/crt.png",
-		      	link: "/ready_join_us/1.mp4"
-		    },
-		    {
-		      	id: 2,
-      			thumbnail: "/crt_people.png",
-		      	link: "/ready_join_us/2.mp4"
-		    }
-	  	];
-
 	return (
-		<div className="grid">
+		<>
 			<div id="sectionReadyToJoinUs">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -199,7 +189,7 @@ const ReadyToJoinUs = () => {
 
 			<div>
 				<div className="grid md:grid-cols-2">
-			        {playVideos.map((video) => (
+			        {ReadyToJoinUsRow.map((video) => (
 			          <motion.div
 				            key={video.id}
 				            className="cursor-pointer relative"
@@ -233,36 +223,36 @@ const ReadyToJoinUs = () => {
 				            animate={{ opacity: 1 }}
 				            exit={{ opacity: 0 }}
 				            onClick={() => setOpen(false)}>
-			            <motion.div
-			              className="w-full max-w-5xl px-4"
-			              initial={{ scale: 0.8, opacity: 0 }}
-			              animate={{ scale: 1, opacity: 1 }}
-			              exit={{ scale: 0.8, opacity: 0 }}
-			              onClick={(e) => e.stopPropagation()}
-			            >
-			              <video
-			                className="w-full rounded-lg"
-			                controls
-			                autoPlay
-			              >
-			                <source src={activeVideo} type="video/mp4" />
-			              </video>
+				            
+				            <motion.div
+				              	className="w-full max-w-5xl px-4"
+				              	initial={{ scale: 0.8, opacity: 0 }}
+				              	animate={{ scale: 1, opacity: 1 }}
+				              	exit={{ scale: 0.8, opacity: 0 }}
+				              	onClick={(e) => e.stopPropagation()}>
+				              	
+				              	<video
+				                	className="w-full rounded-lg"
+				                	controls
+				                	autoPlay>
+				                	<source src={activeVideo} type="video/mp4" />
+				              	</video>
 
-			              <div className="text-center mt-4">
-			                <button
-			                  onClick={() => setOpen(false)}
-			                  className="text-white hover:text-red-400 transition cursor-pointer"
-			                >
-			                  ✕ Close
-			                </button>
-			              </div>
-			            </motion.div>
+				              	<div className="text-center mt-4">
+				                	<button
+				                  		onClick={() => setOpen(false)}
+				                  		className="text-white hover:text-red-400 transition cursor-pointer">
+				                  		✕ Close
+				                	</button>
+				             	</div>
+				            </motion.div>
+			          	
 			          	</motion.div>
 			        )}
 			    </AnimatePresence>
 			</div>	
 
-		</div>
+		</>
 	)
 }
 
