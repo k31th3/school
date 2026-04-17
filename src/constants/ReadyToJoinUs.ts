@@ -1,6 +1,6 @@
 export type RJUItem = {
 	id: number;
-  	title: string;
+  	thumbnail: string;
   	link: string;
 }
 
@@ -13,7 +13,7 @@ export const ReadyToJoinUsRow: RJUItem[] =
     },
     {
       	id: 2,
-			thumbnail: "/crt_people.png",
+		thumbnail: "/crt_people.png",
       	link: "/ready_join_us/2.mp4"
     }
 ];
