@@ -12,7 +12,7 @@ const Footer = () => {
 		<>
 			<div className="bg-[#F9FAFC]" id="sectionContact">
 					
-				<div className="grid md:grid-cols-2 gap-8 md:gap-0 items-stretch">
+				<div className="grid md:grid-cols-2 gap-0 items-stretch">
 
 					<div className="grid gap-4">
 						<div className="w-full h-full">
