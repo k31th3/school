@@ -4,13 +4,12 @@ import { useState, useEffect }     from "react";
 import { animate }                 from "motion";
 import { motion, AnimatePresence } from "motion/react";
 import { MdKeyboardArrowUp }       from "react-icons/md";
-
-import { NavBar, SideBar } from "@/components";
+import { NavBar, SideBar }         from "@/components";
 import { 
         Home, Hero, 
         WhyChooseUs, ReadyToJoinUs, 
         About, Footer 
-    } from "@/components/layout";
+                                 } from "@/components/layout";
 
 import "./App.css";
 

@@ -107,7 +107,7 @@ const Footer = () => {
 				<div className="bg-primary">
 					<div className="text-center py-4 text-xs text-white">
 						College for Research & Technology
-						@Copyright 2020
+						@Copyright 2026
 					</div>
 				</div>
 			</div>

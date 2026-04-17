@@ -1,17 +1,19 @@
 "use client";
 
+
+import { motion }           from "motion/react";
+import { MdMenu }           from "react-icons/md";
 import {
     Dropdown,
     DropdownDivider,
     DropdownItem,
     Button
-} from "flowbite-react";
-
-import { motion } from "motion/react";
-import { MdMenu } from "react-icons/md";
-
-import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
-import { LogoBrand } from "@/components";
+                          } from "flowbite-react";
+import { 
+        NavBarRow, 
+        type NavBarItem, 
+        type NavBarOption } from "@/constants";
+import { LogoBrand }        from "@/components";
 
 type NavbarProps = {
     scrolled: boolean;

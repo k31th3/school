@@ -1,7 +1,6 @@
 
-import { motion } from "motion/react";
-
-import { SlideLeft } from "@/utility/HomeAnimation";
+import { motion } 		  from "motion/react";
+import { SlideLeft } 	  from "@/utility/HomeAnimation";
 import { WhyChooseUsRow } from "@/constants";
 
 const WhyChooseUs = () => {

@@ -1,13 +1,12 @@
 
-import { motion } from "motion/react";
+import { motion } 		 from "motion/react";
 import { FaPenToSquare } from "react-icons/fa6";
-
-import { SlideRight } from "@/utility/HomeAnimation";
+import { SlideRight } 	 from "@/utility/HomeAnimation";
 
 const Home = () => {
 	return (
 		<>
-			<div id="sectionHome">
+		<div id="sectionHome">
 			<div className="mt-35">
 				
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,7 +71,7 @@ const Home = () => {
 				</div>
 
 			</div>
-			</div>
+		</div>
 		</>
 	);
 }

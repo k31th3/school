@@ -1,8 +1,7 @@
 
-import { Popover } from "flowbite-react";
+import { Popover } 		   from "flowbite-react";
 import { PiBuildingsBold } from "react-icons/pi";
-
-import { HeroRow } from "@/constants";
+import { HeroRow } 		   from "@/constants";
 
 const PopoverContent = ({ item }: { item: any }) => (
   	<div className="w-64 p-4 text-sm text-[#878594] space-y-3 break-all">

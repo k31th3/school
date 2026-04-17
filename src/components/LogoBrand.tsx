@@ -1,6 +1,6 @@
-import React from "react";
+import React    from "react";
 import { Link } from "react-router-dom";
-import Logo from "@/assets/CRTLogo.png";
+import Logo     from "@/assets/CRTLogo.png";
 
 type LogoBrandProps = {
     title?: string;
@@ -24,7 +24,7 @@ const LogoBrand: React.FC<LogoBrandProps> = ({
             {
                 title && (
                     <span
-                        className={`text-xs font-semibold uppercase max-w-[150px] dark:text-white ${textClassName}`}>
+                        className={`text-xs font-semibold uppercase max-w-[150px] ${textClassName}`}>
                         {title}
                     </span>
                 )

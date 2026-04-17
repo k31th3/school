@@ -1,17 +1,17 @@
 
-import { motion, AnimatePresence } from "motion/react";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { useState } from "react";
-
-import { NavBarRow, type NavBarItem, type NavBarOption } from "@/constants";
-import { LogoBrand } from "@/components";
-
+import { useState }                 from "react";
+import { motion, AnimatePresence }  from "motion/react";
 import {
     Sidebar,
     SidebarItem,
     SidebarItemGroup,
     SidebarItems
-} from "flowbite-react";
+}                                   from "flowbite-react";
+import { MdKeyboardArrowDown }      from "react-icons/md";
+import { NavBarRow, 
+         type NavBarItem, 
+         type NavBarOption }        from "@/constants";
+import { LogoBrand }                from "@/components";
 
 type SideBarProps = {
     isOpen: boolean;
