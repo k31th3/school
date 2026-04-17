@@ -187,7 +187,7 @@ const ReadyToJoinUs = () => {
 				</div>
 			</div>
 
-			<div>
+			<div className="pb-20">
 				<div className="grid md:grid-cols-2">
 			        {ReadyToJoinUsRow.map((video) => (
 			          <motion.div
