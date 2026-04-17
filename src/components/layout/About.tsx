@@ -24,7 +24,7 @@ const About = () => {
 							variants={SlideRight(0.3)}
 					    	initial="hidden"
 					    	whileInView={"visible"} 
-					    	div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+					    	className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
 					  	<div 
 					  		className="bg-white/90 backdrop-blur px-8 py-5 rounded-xl shadow-xl border border-gray-100 text-center 
 					  		h-20 w-80 flex items-center justify-center">
@@ -41,7 +41,7 @@ const About = () => {
 						className="bg-[#F9FAFC] px-8 py-16 rounded-lg 
 						shadow-xl border border-gray-100 w-[90%] md:w-[80%] m-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
 
-						{AboutMSRow.map((item, index) => {
+						{AboutMSRow.map((item) => {
 					        const Icon = item.icon;
 
 					        return (
