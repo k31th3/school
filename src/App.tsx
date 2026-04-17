@@ -1,11 +1,16 @@
 
-import { MdKeyboardArrowUp } from "react-icons/md";
-import { useState, useEffect } from "react";
-import { animate } from "motion";
+
+import { useState, useEffect }     from "react";
+import { animate }                 from "motion";
 import { motion, AnimatePresence } from "motion/react";
+import { MdKeyboardArrowUp }       from "react-icons/md";
 
 import { NavBar, SideBar } from "@/components";
-import { Home, Hero, WhyChooseUs, ReadyToJoinUs, Footer } from "@/components/layout";
+import { 
+        Home, Hero, 
+        WhyChooseUs, ReadyToJoinUs, 
+        About, Footer 
+    } from "@/components/layout";
 
 import "./App.css";
 
@@ -114,11 +119,11 @@ const App = () => {
             {/*offCanvas*/}
             <SideBar isOpen={isOpen} handleClose={handleClose} />
             
-
             <Home />
             <Hero />  
             <WhyChooseUs />
             <ReadyToJoinUs />
+            <About />
             <Footer />
             
         </main>

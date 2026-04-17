@@ -43,7 +43,7 @@ export const NavBarRow: NavBarItem[] = [
 	{
 		id: 3,
 		title: "about",
-		link: "#",
+		link: "#sectionAbout",
 		icon: MdInfo
 	},
 	{
