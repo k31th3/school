@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
 							
 							{WhyChooseUsRow.map((item, index) => (
 							    <motion.div
-							    	variants={SlideLeft(index * 0.3)}
+							    	variants={SlideLeft(index * 0.1)}
 							    	initial="hidden"
 							    	whileInView={"visible"}
 								    key={item.id}
