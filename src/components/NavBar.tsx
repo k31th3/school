@@ -91,7 +91,7 @@ const NavBar = ({ scrolled, onOpenMenu }: NavbarProps) => {
                 <Button
                     color="light"
                     size="md"
-                    className="cursor-pointer px-3"
+                    className="cursor-pointer px-3 dark:bg-white dark:text-dark"
                     aria-label="Open menu"
                     onClick={onOpenMenu}>
                     <MdMenu size={24} />

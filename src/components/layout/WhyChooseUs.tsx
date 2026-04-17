@@ -29,18 +29,18 @@ const WhyChooseUs = () => {
 							    	initial="hidden"
 							    	whileInView={"visible"}
 								    key={item.id}
-								    className="flex overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-800">
+								    className="flex overflow-hidden rounded-xl shadow-lg bg-white">
 								    <img
 								        src={item.link}
 								        alt={item.title}
 								        className="w-60 object-cover"/>
 
 							      	<div className="p-4 min-w-0">
-							        	<h5 className="text-xl font-bold text-gray-900 dark:text-white">
+							        	<h5 className="text-xl font-bold">
 							          		{item.title}
 							        	</h5>
 
-							        	<p className="mt-2 text-gray-700 dark:text-gray-400 break-words text-xs lg:text-sm">
+							        	<p className="mt-2 text-gray-700 break-words text-xs lg:text-sm text-[#878594]">
 							          		{item.information}
 							        	</p>
 							      	</div>

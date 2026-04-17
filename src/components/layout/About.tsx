@@ -34,7 +34,7 @@ const About = () => {
 							variants={SlideLeft(0.6)}
 					    	initial="hidden"
 					    	whileInView={"visible"}  
-						className="bg-[#F9FAFC] px-8 py-16 rounded-lg 
+						className="bg-[#F9FAFC] px-8 py-24 rounded-lg 
 						shadow-xl border border-gray-100 w-[90%] md:w-[80%] m-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
 
 						{AboutMSRow.map((item) => {
@@ -46,7 +46,7 @@ const About = () => {
 					              		<Icon className="text-2xl text-gray-700" />
 					              		<h3 className="text-xl font-semibold">{item.title}</h3>
 					            	</div>
-					            	<p className="text-[#878594] leading-relaxed text-sm">
+					            	<p className="text-[#878594] leading-relaxed text-sm text-left">
 					              		{item.text}
 					            	</p>
 					          	</div>

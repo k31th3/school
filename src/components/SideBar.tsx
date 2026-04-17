@@ -69,7 +69,7 @@ const SideBar = ({ isOpen, handleClose }: SideBarProps) => {
                                             >
                                                 <span className="me-auto">{item.dropdown.title}</span>
                                                 <MdKeyboardArrowDown
-                                                    className={`text-gray-900 text-[30px] transition-transform duration-300 ${
+                                                    className={`text-black dark:text-black text-[30px] transition-transform duration-300 ${
                                                         isItemOpen ? "rotate-180" : ""
                                                     }`}
                                                 />
@@ -95,7 +95,7 @@ const SideBar = ({ isOpen, handleClose }: SideBarProps) => {
                                                             href={opt.link}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="block w-full"
+                                                            className="block w-full text-black"
                                                         >
                                                             {opt.title}
                                                         </a>
@@ -112,7 +112,7 @@ const SideBar = ({ isOpen, handleClose }: SideBarProps) => {
                                         href={item.link}
                                         icon={item.icon}
                                         onClick={handleClose}
-                                        className="hover:bg-blue-100 focus:bg-blue-100 rounded-sm"
+                                        className="hover:bg-blue-100 focus:bg-blue-100 rounded-sm dark:text-black"
                                     >
                                         {item.title}
                                     </SidebarItem>

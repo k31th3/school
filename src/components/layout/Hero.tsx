@@ -4,7 +4,7 @@ import { PiBuildingsBold } from "react-icons/pi";
 import { HeroRow } 		   from "@/constants";
 
 const PopoverContent = ({ item }: { item: any }) => (
-  	<div className="w-64 p-4 text-sm text-[#878594] space-y-3 break-all">
+  	<div className="w-64 p-4 text-sm text-[#878594] space-y-3 break-all dark:bg-white rounded-md">
 	    <div>
 	      	<p className="text-xs font-semibold text-gray-500 uppercase">Street</p>
 	      	<p className="text-xs">{item.street || "N/A"}</p>
