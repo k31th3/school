@@ -12,7 +12,7 @@ import { ReadyToJoinUsRow }      from "@/constants";
 const ReadyToJoinUs = () => {
 
 	const [open, setOpen] = useState(false);
-  	const [activeVideo, setActiveVideo] = useState(null);
+	const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
 	return (
 		<>
