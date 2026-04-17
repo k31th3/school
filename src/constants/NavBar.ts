@@ -75,7 +75,7 @@ export const NavBarRow: NavBarItem[] = [
 	{
 		id: 6,
 		title: "contact us",
-		link: "#",
+		link: "#sectionContact",
 	  icon: MdContactMail
 	}
 

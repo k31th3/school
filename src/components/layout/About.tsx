@@ -20,11 +20,7 @@ const About = () => {
 			<div id="sectionAbout" className="relative">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-					<motion.div 
-							variants={SlideRight(0.3)}
-					    	initial="hidden"
-					    	whileInView={"visible"} 
-					    	className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+					<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
 					  	<div 
 					  		className="bg-white/90 backdrop-blur px-8 py-5 rounded-xl shadow-xl border border-gray-100 text-center 
 					  		h-20 w-80 flex items-center justify-center">
@@ -32,7 +28,7 @@ const About = () => {
 					      		ABOUT US?
 					    	</h2>
 					  	</div>
-					</motion.div>
+					</div>
 
 					<motion.div 
 							variants={SlideLeft(0.6)}
