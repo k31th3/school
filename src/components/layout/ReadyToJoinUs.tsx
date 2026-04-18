@@ -201,9 +201,11 @@ const ReadyToJoinUs = () => {
 			            
 				        <div className="relative bg-[#525967]">
 				        	<img
-				              src={video.thumbnail}
-				              className="rounded-lg w-full"
-				            />
+				                src={video.thumbnail}
+				                className="rounded-lg w-full"
+				                onContextMenu={(e) => e.preventDefault()}
+								draggable="false"
+								onDragStart={(e) => e.preventDefault()}/>
 				        	<div className="absolute inset-0 flex items-center justify-center">
 				              	<div className="bg-black/50 text-white px-4 py-2 rounded-full">
 				                	▶ Play

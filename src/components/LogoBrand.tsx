@@ -20,7 +20,10 @@ const LogoBrand: React.FC<LogoBrandProps> = ({
             <img
                 src={Logo}
                 alt="logo"
-                className={`size-10 shrink-0 ${imgClassName}`}/>
+                className={`size-10 shrink-0 ${imgClassName}`}
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                onDragStart={(e) => e.preventDefault()}/>
             {
                 title && (
                     <span

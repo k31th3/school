@@ -1,19 +1,46 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
-import path from "path";
+import { defineConfig }       from "vite"
+import tailwindcss            from "@tailwindcss/vite"
+import react                  from "@vitejs/plugin-react"
+import path                   from "path";
+import obfuscator             from "vite-plugin-javascript-obfuscator";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    babel({ presets: [reactCompilerPreset()] }),
-    tailwindcss()
+    tailwindcss(),
+
+    obfuscator({
+      compact: true,
+      controlFlowFlattening: true,
+      controlFlowFlatteningThreshold: 1,
+      deadCodeInjection: true,
+      deadCodeInjectionThreshold: 0.4,
+      debugProtection: true,
+      debugProtectionInterval: 2000,
+      disableConsoleOutput: true,
+      identifierNamesGenerator: "hexadecimal",
+      numbersToExpressions: true,
+      rotateStringArray: true,
+      selfDefending: true,
+      shuffleStringArray: true,
+      simplify: true,
+      splitStrings: true,
+      splitStringsChunkLength: 5,
+      stringArray: true,
+      stringArrayEncoding: ["base64"],
+      stringArrayThreshold: 1
+    } as any)
   ],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+
+  build: {
+    sourcemap: false,
+    minify: "terser"
+  }
+});

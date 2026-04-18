@@ -63,7 +63,9 @@ const Home = () => {
 				              	src="people.png"
 				              	alt="hero image"
 				              	className="w-[550px] md:w-[550px] xl:w-[700px]"
-				            />
+				              	onContextMenu={(e) => e.preventDefault()}
+								draggable="false"
+								onDragStart={(e) => e.preventDefault()}/>
 					    </div>
 
 				  	</div>

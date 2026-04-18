@@ -33,7 +33,10 @@ const WhyChooseUs = () => {
 								    <img
 								        src={item.link}
 								        alt={item.title}
-								        className="w-60 object-cover"/>
+								        className="w-60 object-cover"
+								    	onContextMenu={(e) => e.preventDefault()}
+										draggable="false"
+										onDragStart={(e) => e.preventDefault()}/>
 
 							      	<div className="p-4 min-w-0">
 							        	<h5 className="text-xl font-bold">

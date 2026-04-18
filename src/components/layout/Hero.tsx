@@ -58,7 +58,11 @@ const Hero = () => {
 					        	<img
 					          		src={item.link}
 					          		alt={item.title}
-					          		className="w-16 h-16 object-contain mb-3"/>
+					          		className="w-16 h-16 object-contain mb-3"
+					          		onContextMenu={(e) => e.preventDefault()}
+									draggable="false"
+									onDragStart={(e) => e.preventDefault()}
+					          		/>
 
 					        	<h3 className="text-sm font-semibold text-primary">
 					          		{item.title}
