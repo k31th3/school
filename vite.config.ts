@@ -3,13 +3,16 @@ import tailwindcss            from "@tailwindcss/vite"
 import react                  from "@vitejs/plugin-react"
 import path                   from "path";
 import obfuscator             from "vite-plugin-javascript-obfuscator";
+import { createHtmlPlugin }   from "vite-plugin-html";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-
+    createHtmlPlugin({
+      minify: true,
+    }),
     obfuscator({
       compact: true,
       controlFlowFlattening: true,
