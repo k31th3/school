@@ -38,9 +38,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
   build: {
+    cssMinify: true,
     sourcemap: false,
-    minify: "terser"
+    minify: "terser",
+    terserOptions: {
+      mangle: true,
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    }
   }
 });
